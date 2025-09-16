@@ -1,0 +1,175 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+/* Sección de entrada */
+.input-section {
+    background-color: var(--color-secondary);
+    border-radius: 32px 32px 0 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Input y botón añadir */
+.input-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.input-name {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border: 2px solid #000;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+}
+
+/* Lista de amigos */
+.name-list li {
+    background: #f7f7f7;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Resultado */
+.result-list {
+    background: #e6ffe6;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0a7d0a;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Botón sortear */
+.button-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 20px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.button-draw img {
+    width: 24px;
+    height: 24px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 36px;
+    }
+    .section-title {
+        font-size: 22px;
+    }
+    .button-draw {
+        font-size: 16px;
+    }
+}
+.reveal { animation: pop 300ms ease; }
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
